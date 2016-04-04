@@ -36,7 +36,7 @@ module.exports = React.createClass({
 
   onCheckboxChange: function onCheckboxChange(checkboxValue, event) {
     var newValue;
-    if (event.target.checked) {
+    if (event.target && event.target.checked) {
       newValue = this.state.value.concat(checkboxValue);
     } else {
       newValue = this.state.value.filter(function (v) {
